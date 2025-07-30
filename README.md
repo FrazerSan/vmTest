@@ -16,3 +16,10 @@ alert tcp $HOME_NET 21 -> $EXTERNAL_NET any (
     sid:1000001;
     rev:1;
 )
+
+
+# snort conf
+
+var HOME_NET any
+var EXTERNAL_NET any
+include /etc/snort/rules/local.rules
