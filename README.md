@@ -23,3 +23,7 @@ alert tcp $HOME_NET 21 -> $EXTERNAL_NET any (
 var HOME_NET any
 var EXTERNAL_NET any
 include /etc/snort/rules/local.rules
+
+#launch snort
+
+sudo snort -A console -q -c /etc/snort/snort.conf -i eth0
