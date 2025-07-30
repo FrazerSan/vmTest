@@ -27,3 +27,20 @@ include /etc/snort/rules/local.rules
 #launch snort
 
 sudo snort -A console -q -c /etc/snort/snort.conf -i eth0
+
+
+# new try
+
+HOME_NET = 'any'
+EXTERNAL_NET = 'any'
+ips =
+{
+    rules =
+    {
+        include = 'local.rules'
+    }
+}
+
+# new launch
+
+snort -c /etc/snort/snort.lua -i eth0
